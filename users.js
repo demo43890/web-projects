@@ -1,7 +1,7 @@
 const users = [
   {
     id: 1,
-    name: "John",
+    name: "John Smith",
     email: "john@example.com"
   },
   {
@@ -14,5 +14,15 @@ const users = [
 function getUser(id) {
   return users.find(user => user.id === id);
 }
+function createUser(name, email) {
+  const user = {
+    id: users.length + 1,
+    name,
+    email
+  };
 
-module.exports = { users, getUser };
+  users.push(user);
+
+  return user;
+}
+module.exports = { users, getUser, createUser };
