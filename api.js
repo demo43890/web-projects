@@ -10,10 +10,11 @@ function getUserProfile(id) {
   }
 
   return {
-    id: user.id,
-    name: user.name,
-    email: user.email
-  };
+  id: user.id,
+  name: user.name,
+  email: user.email,
+  profileUrl: `/users/${user.id}`
+};
 }
 
 module.exports = { getUserProfile };
