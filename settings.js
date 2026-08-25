@@ -1,9 +1,9 @@
 const settings = {
-  theme: "light",
+  theme: "dark",
   notifications: true,
-  language: "en"
+  language: "en",
+  compactMode: true
 };
-
 function updateSettings(changes) {
   return {
     ...settings,
